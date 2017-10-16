@@ -1,32 +1,32 @@
-  .Header {
-    display: block;
+.Header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     height: 60px;
     width: auto;
-    text-align: center;
     border: 4px solid #000;
   }
-  
-  .Header__text {
-    line-height: 60px;
-    display: inline;
-    margin: 0;
+  .Flex-container {
+    display: flex;
+    flex-direction: row;
   }
-  
   .Content {
-    position: relative;
-    display: inline-block;
+    justify-content: center;
     padding: 10px;
     height: 200px;
     width: 50%;    
     border-bottom: 4px solid black;
     border-left: 4px solid black;
     border-right: 4px solid black;
-    box-sizing: border-box;
   }
   
+  .First-box__title-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
   .Content span {
-    position: absolute;
-    right: 0;
     text-align: center;
     line-height: 30px;
     background-color: #444;
@@ -34,15 +34,12 @@
     height: 30px;
   }
 
-  .Content h2 {
-    display: inline;
-  }
-
   .First-box {
-    float: left;
     border-right: 2px solid #000; 
   }
-  
+  .First-box p {
+    margin: 0;
+  }
   .Second-box {
     border-left: 2px solid #000; 
   }
@@ -61,8 +58,12 @@
 
   @media (max-width: 620px) {
     .Content {
-      width: 100%;
+      width: auto;
       height: 190px;
+    }
+    .Flex-container {
+      display: flex;
+      flex-direction: column;
     }
     .First-box {
       border-right: 4px solid #000; 
